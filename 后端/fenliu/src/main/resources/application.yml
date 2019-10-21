@@ -1,0 +1,33 @@
+
+spring:
+  #配置数据连接池
+  datasource:
+    url: jdbc:mysql://cdb-f30tj9vs.bj.tencentcdb.com:10140/fenliu?serverTimezone=UTC
+    username: root
+    password: Aa123_456_
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      initial-size: 5
+      min-idle: 5
+      max-active: 20
+      max-wait: 60000
+      time-between-eviction-runs-millis: 60000
+      min-evictable-idle-time-millis: 300000
+  #配置jpa
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+  data:
+    rest:
+      base-path: /api
+#配置邮箱
+  mail:
+    default-encoding: utf-8
+    host: smtp.yeah.net
+    port: 25
+    protocol: smtp
+    username: anyous@yeah.net
+    password: Aa19960117
